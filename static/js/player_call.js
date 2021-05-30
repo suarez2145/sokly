@@ -62,7 +62,7 @@ let app = new Vue({
             console.log('>> formData >> ', formData);
             
 
-            axios.post('/photos/',
+            axios.post('/api/apiphotos/',
                 formData, 
                 {
                     // had to add csrf_token to headers because it was missing and denying post request
@@ -148,7 +148,7 @@ let app = new Vue({
             axios({
 
                 method: 'get',
-                url: "/photos/",
+                url: "/api/apiphotos/",
                 headers: {
 
                 },
@@ -177,7 +177,7 @@ let app = new Vue({
                 
                 method: 'delete',
 // need to add id dynamically?? cant seem to ad ID and have it find the ID of the player it works if number is hard coded like below 
-                baseURL: `/photos/${result.id}/`,
+                baseURL: `/api/apiphotos/${result.id}/`,
                 headers: {
                     "X-CSRFToken": csrf_token,
                     'Content-Type': 'application/json'
@@ -223,7 +223,7 @@ let app = new Vue({
             axios({
                 
                 method: "put",
-                baseURL:`/photos/${result.id}/`,formData,
+                baseURL:`/api/apiphotos/${result.id}/`,formData,
                 headers: {
                     "X-CSRFToken": csrf_token,
                     // "Content-Type": "application/json",
@@ -268,7 +268,7 @@ let app = new Vue({
                 axios({
                     
                     method: "put",
-                    baseURL:`/photos/${result.id}/`,formData,
+                    baseURL:`/api/apiphotos/${result.id}/`,formData,
                     headers: {
                         "X-CSRFToken": csrf_token,
                         // "Content-Type": "application/json",
@@ -370,7 +370,7 @@ let app = new Vue({
                 axios({
                     
                     method: "patch",
-                    baseURL:`/photos/${result.id}/`,formData,
+                    baseURL:`/api/apiphotos/${result.id}/`,formData,
                     headers: {
                         "X-CSRFToken": csrf_token,
                         // "Content-Type": "application/json",
@@ -425,7 +425,7 @@ let app = new Vue({
     mounted: function(){
         this.getPlayersPhotos();
         this.getLocationWeather();
-        this.getWeatherIcon();
+        // this.getWeatherIcon();
         
     }
 
