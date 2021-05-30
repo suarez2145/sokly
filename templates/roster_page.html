@@ -62,15 +62,15 @@
                                     <dark-weatherinfo class="DarkWeatherInfo" :location-cond-temp='locationCondTemp'  :location-info='Locationinfo' :location-icon='locationIcon'></dark-weatherinfo>
                             </div> -->
             
-                            <a href="http://localhost:8000/manager"class="navbar-item">
+                            <a href="{% url 'manager'%}"class="navbar-item">
                             Starter Line-up
                             </a>
                     
-                            <a href="http://localhost:8000/player_map" class="navbar-item">
+                            <a href="{% url 'player_map'%}" class="navbar-item">
                             Player-Map
                             </a>
             
-                            <a href="http://localhost:8000/roster_page" class="navbar-item">
+                            <a href="{% url 'roster_page'%}" class="navbar-item">
                             Roster-Page
                             </a>
             
