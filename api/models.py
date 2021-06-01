@@ -49,7 +49,8 @@ class PlayerPhoto(models.Model):
     name = models.CharField(max_length=255, blank=True)
     number = models.CharField(max_length=15, blank=True)
     address = models.CharField(max_length=100, blank=True)
-    file = models.FileField(upload_to='photos', max_length=300, blank=True)
+    # file = models.FileField(upload_to='photos', max_length=300, blank=True)
+    file = models.FileField(null=True, max_length=300, blank=True)
     starter = models.BooleanField(default=False)
     owner = models.ForeignKey('auth.User',default=None,blank=True, on_delete=models.CASCADE)
 
